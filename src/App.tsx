@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './styles.css';
 import { Header } from './components/header';
 import { Container } from './components/container';
+import { Hero } from './components/section/hero';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -11,9 +12,7 @@ function App() {
     <>
       <Header />
       <main className="h-[300vh]">
-        <div>
-          <Container>Hero comp</Container>
-        </div>
+        <Hero />
         <div>
           <Container>usps</Container>
         </div>
