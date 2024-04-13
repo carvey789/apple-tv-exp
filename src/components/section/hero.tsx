@@ -13,11 +13,11 @@ export const Hero = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.7, 1], [1, 1, 0]);
 
   return (
-    <div className="relative bg-background h-[300vh] text-white">
+    <div className="relative bg-background text-white">
       <motion.div
         style={{ opacity }}
         ref={videoContainerRef}
-        className="absolute -top-[--header-height] left-0 w-full h-[200vh]"
+        className="absolute -top-[--header-height] left-0 h-[200vh] w-full"
       >
         <img
           className="sticky top-0 h-screen w-screen object-cover"
@@ -25,9 +25,9 @@ export const Hero = () => {
           alt="Hero Napoleon"
         />
       </motion.div>
-      <Container className="relative z-10 pb-7 h-[--hero-height]">
+      <Container className="relative z-10 h-[--hero-height] pb-7">
         <motion.div
-          className="flex flex-col h-full items-start justify-end"
+          className="flex h-full flex-col items-start justify-end"
           variants={{
             hidden: { opacity: 0 },
             visible: { opacity: 1 },
@@ -37,7 +37,7 @@ export const Hero = () => {
           animate="hidden"
           viewport={{ amount: 0.9 }}
         >
-          <h1 className="text-5xl font-bold mb-10">
+          <h1 className="mb-10 text-5xl font-bold">
             All Apple Originals. <br />
             Only on Apple TV+
           </h1>
